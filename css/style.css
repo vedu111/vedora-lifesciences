@@ -1,11 +1,11 @@
 /* ============================================================
-   VEDORA LIFESCIENCES — clinic template
+   VEDORA LIFESCIENCES â€” clinic template
    Custom design layer over Bootstrap 5 (self-hosted)
-   Palette: royal blue + cyan + leaf green  ·  Type: Hanken Grotesque / Mulish
+   Palette: royal blue + cyan + leaf green  Â·  Type: Hanken Grotesque / Mulish
    ============================================================ */
 
 :root {
-  /* Brand — matched to Vedora logo */
+  /* Brand â€” matched to Vedora logo */
   --teal-900: #041e42;
   --teal-800: #063568;
   --teal:     #0066cc;   /* primary royal blue */
@@ -200,6 +200,14 @@ img { max-width: 100%; height: auto; }
 }
 .site-nav.scrolled { box-shadow: var(--shadow-sm); }
 
+/* Nav inner: full width, same horizontal padding as page sections */
+.site-nav nav.container {
+  max-width: 100%;
+  padding-left: clamp(20px, 5vw, 64px);
+  padding-right: clamp(20px, 5vw, 64px);
+  min-height: var(--nav-h);
+}
+
 .brand { display: inline-flex; align-items: center; }
 .brand-logo {
   display: block;
@@ -211,11 +219,11 @@ img { max-width: 100%; height: auto; }
 
 .site-nav .nav-link {
   font-family: var(--font-head); font-weight: 700;
-  color: var(--ink); padding: 10px 16px; position: relative;
+  color: var(--ink); padding: 10px 20px; position: relative;
   font-size: .98rem;
 }
 .site-nav .nav-link::after {
-  content: ""; position: absolute; left: 16px; right: 16px; bottom: 4px;
+  content: ""; position: absolute; left: 20px; right: 20px; bottom: 4px;
   height: 2px; background: var(--coral); transform: scaleX(0);
   transform-origin: left; transition: transform .22s ease;
 }
@@ -223,6 +231,23 @@ img { max-width: 100%; height: auto; }
 .site-nav .nav-link.active { color: var(--teal); }
 .site-nav .nav-link:hover::after,
 .site-nav .nav-link.active::after { transform: scaleX(1); }
+
+/* Desktop: nav-menu fills remaining space, links spread evenly */
+@media (min-width: 992px) {
+  .site-nav .nav-menu {
+    display: flex !important;
+    align-items: center;
+    flex: 1;
+  }
+
+  .site-nav .navbar-nav {
+    flex-direction: row !important;
+    flex: 1;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0;
+  }
+}
 
 .nav-phone {
   font-family: var(--font-head); font-weight: 800; color: var(--ink);
@@ -703,7 +728,7 @@ textarea.form-control { min-height: 140px; }
 .footer-bottom a { color: #c5ddf4; }
 
 /* ============================================================
-   REVEAL ANIMATIONS (progressive enhancement — scoped to .js)
+   REVEAL ANIMATIONS (progressive enhancement â€” scoped to .js)
    ============================================================ */
 .js .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
 .js .reveal.in { opacity: 1; transform: none; }
@@ -738,3 +763,1001 @@ textarea.form-control { min-height: 140px; }
   .cta-band p { margin-inline: auto; }
   .cta-band .cta-actions { justify-content: center; }
 }
+
+/* ============================================================
+   HERO COMPONENT  (vedora-hero)
+   ============================================================ */
+
+.vedora-hero,
+.vedora-hero * {
+  box-sizing: border-box;
+}
+
+.vedora-hero {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+  padding: 54px 0 64px;
+  background:
+    radial-gradient(
+      circle at 96% 12%,
+      rgba(34, 197, 158, 0.12),
+      transparent 310px
+    ),
+    #f0f8ff;
+  font-family: "Mulish", system-ui, sans-serif;
+  color: #071a36;
+  line-height: 1.6;
+}
+
+.vedora-hero-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1512px;
+  margin-inline: auto;
+  padding-inline: 34px;
+}
+
+.vedora-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  align-items: stretch;
+  gap: clamp(24px, 3vw, 48px);
+  width: 100%;
+  min-height: 480px;
+}
+
+/* LEFT CONTENT */
+
+.vedora-hero-content {
+  min-width: 0;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vedora-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 100%;
+  margin: 0 0 27px;
+  padding: 10px 18px 10px 12px;
+  border: 1px solid #d5e6f7;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(28, 78, 125, 0.05);
+  color: #0066cc;
+  font-family: "Mulish", system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  white-space: normal;
+}
+
+.vedora-hero-pill-line {
+  display: block;
+  width: 48px;
+  height: 4px;
+  flex: 0 0 48px;
+  background: linear-gradient(90deg, #0874d0, #00b99b);
+}
+
+.vedora-hero-title {
+  margin: 0 0 25px;
+  padding: 0;
+  color: #0b1e3d;
+  font-family: "Hanken Grotesk", system-ui, sans-serif;
+  font-size: clamp(44px, 4.15vw, 74px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -2.8px;
+}
+
+.vedora-hero-accent {
+  color: #0868cf;
+  font: inherit;
+  letter-spacing: inherit;
+  white-space: normal;
+}
+
+.vedora-hero-description {
+  max-width: 540px;
+  margin: 0 0 30px;
+  padding: 0;
+  color: #526987;
+  font-family: "Mulish", system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+/* BUTTONS */
+
+.vedora-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 0 36px;
+  padding: 0;
+}
+
+.vedora-hero .vedora-hero-btn {
+  display: inline-flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0;
+  padding: 13px 26px;
+  border: 1.5px solid transparent;
+  border-radius: 14px;
+  font-family: "Hanken Grotesk", system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.vedora-hero .vedora-hero-btn-primary {
+  color: #ffffff;
+  background: #0868ca;
+  border-color: #0868ca;
+  box-shadow: 0 10px 24px rgba(0, 104, 202, 0.18);
+}
+
+.vedora-hero .vedora-hero-btn-primary:hover {
+  color: #ffffff;
+  background: #0755a8;
+  border-color: #0755a8;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 104, 202, 0.25);
+}
+
+.vedora-hero .vedora-hero-btn-outline {
+  color: #0868ca;
+  background: transparent;
+  border-color: #0868ca;
+}
+
+.vedora-hero .vedora-hero-btn-outline:hover {
+  color: #ffffff;
+  background: #0868ca;
+  border-color: #0868ca;
+  transform: translateY(-2px);
+}
+
+.vedora-hero .vedora-hero-btn:focus-visible {
+  outline: 3px solid rgba(0, 102, 204, 0.35);
+  outline-offset: 3px;
+}
+
+/* BENEFITS */
+
+.vedora-hero-benefits {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px 32px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.vedora-hero-benefit {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.vedora-hero-benefit-icon {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(8, 104, 202, 0.1);
+  color: #0868ca;
+}
+
+.vedora-hero-benefit-icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.vedora-hero-benefit strong {
+  display: block;
+  margin: 0 0 3px;
+  color: #102444;
+  font-family: "Hanken Grotesk", system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.vedora-hero-benefit small {
+  display: block;
+  margin: 0;
+  color: #6a7f9b;
+  font-family: "Mulish", system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* IMAGE PANEL â€” bleeding / overflow layout */
+
+.vedora-hero-visual {
+  min-width: 0;
+  /* Bleed: extend beyond section padding and container padding */
+  margin-top: -54px;
+  margin-bottom: -64px;
+  margin-right: -34px;
+  align-self: stretch;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+
+.vedora-hero-image-frame {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+}
+
+.vedora-hero .vedora-hero-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center bottom;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+
+
+
+
+/* TABLET */
+
+@media (max-width: 1199px) {
+  .vedora-hero-container {
+    padding-inline: 28px;
+  }
+
+  .vedora-hero-grid {
+    gap: 20px;
+  }
+
+  .vedora-hero-title {
+    font-size: clamp(42px, 4.5vw, 58px);
+    letter-spacing: -2px;
+  }
+
+  .vedora-hero-pill {
+    gap: 10px;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+  }
+
+  .vedora-hero-pill-line {
+    width: 32px;
+    flex-basis: 32px;
+  }
+
+  .vedora-hero-description {
+    font-size: 15px;
+  }
+
+  .vedora-hero-benefits {
+    gap: 14px 22px;
+  }
+
+  .vedora-hero-benefit-icon {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+
+  .vedora-hero-visual {
+    margin-right: -28px;
+  }
+}
+
+/* TABLET LAYOUT â€” MOBILE NAVIGATION WIDTH */
+
+@media (max-width: 991.98px) {
+  .vedora-hero {
+    padding: 44px 0 0;
+  }
+
+  .vedora-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 36px;
+    min-height: auto;
+  }
+
+  .vedora-hero-content {
+    max-width: 760px;
+  }
+
+  .vedora-hero-title {
+    font-size: clamp(44px, 7vw, 66px);
+  }
+
+  .vedora-hero-description {
+    max-width: 700px;
+    font-size: 17px;
+  }
+
+  .vedora-hero-visual {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: -28px;
+    max-width: none;
+    min-height: 280px;
+  }
+
+  .vedora-hero-benefits {
+    flex-wrap: wrap;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 575.98px) {
+  .vedora-hero {
+    padding: 32px 0 0;
+  }
+
+  .vedora-hero-container {
+    padding-inline: 18px;
+  }
+
+  .vedora-hero-pill {
+    gap: 9px;
+    margin-bottom: 22px;
+    padding: 9px 12px 9px 9px;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+  }
+
+  .vedora-hero-pill-line {
+    width: 24px;
+    height: 3px;
+    flex-basis: 24px;
+  }
+
+  .vedora-hero-title {
+    margin-bottom: 18px;
+    font-size: clamp(37px, 10vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -1.8px;
+  }
+
+  .vedora-hero-description {
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .vedora-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .vedora-hero .vedora-hero-btn {
+    width: 100%;
+    min-height: 52px;
+    padding: 13px 18px;
+    border-radius: 12px;
+  }
+
+  .vedora-hero-benefits {
+    gap: 14px 18px;
+  }
+
+  .vedora-hero-benefit strong {
+    font-size: 12px;
+  }
+
+  .vedora-hero-benefit small {
+    font-size: 11px;
+  }
+
+  .vedora-hero-visual {
+    margin-right: -18px;
+    height: 280px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vedora-hero .vedora-hero-btn {
+    transition: none;
+  }
+}
+
+
+
+/* ============================================================
+   ABOUT US COMPONENT  (vedora-about / va-*)
+   ============================================================ */
+
+.vedora-about {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 76px 0 0;
+  color: #102345;
+  background:
+    radial-gradient(
+      circle at 94% 8%,
+      rgba(104, 226, 193, 0.13),
+      transparent 25%
+    ),
+    linear-gradient(135deg, #f2f8ff 0%, #ffffff 65%);
+  font-family: inherit;
+}
+
+.vedora-about *,
+.vedora-about *::before,
+.vedora-about *::after {
+  box-sizing: border-box;
+}
+
+.va-container {
+  width: min(1320px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+.va-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  align-items: center;
+  gap: 48px;
+}
+
+.va-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  color: #0867cf;
+  font-size: 14px;
+  font-weight: 750;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.va-eyebrow::before {
+  width: 44px;
+  height: 3px;
+  flex: 0 0 44px;
+  background: linear-gradient(90deg, #0871df, #04b99b);
+  content: "";
+}
+
+.va-heading {
+  max-width: 690px;
+  margin: 0 0 22px;
+  color: #0b1e3e;
+  font-size: clamp(36px, 3.6vw, 57px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+}
+
+.va-heading span {
+  color: #0870d8;
+  background: linear-gradient(90deg, #0870d8, #08a99f);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.va-description {
+  max-width: 650px;
+  margin: 0;
+  color: #536987;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.va-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 30px;
+  overflow: hidden;
+  border: 1px solid #d6e7fb;
+  border-radius: 19px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 28px rgba(24, 70, 120, 0.04);
+}
+
+.va-highlight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 20px;
+}
+
+.va-highlight:nth-child(odd) {
+  border-right: 1px solid #e0ebf8;
+}
+
+.va-highlight:nth-child(-n + 2) {
+  border-bottom: 1px solid #e0ebf8;
+}
+
+.va-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.va-icon.blue {
+  color: #0870d8;
+  background: #e5f2ff;
+}
+
+.va-icon.green {
+  color: #00a982;
+  background: #e1f8f0;
+}
+
+.va-highlight-value {
+  margin: 0 0 5px;
+  color: #102345;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.va-highlight-label {
+  margin: 0;
+  color: #6b7f9d;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.va-visual {
+  position: relative;
+  min-width: 0;
+}
+
+.va-image-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1.13 / 1;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  background: #e7f4ff;
+  box-shadow: 0 24px 60px rgba(19, 56, 94, 0.14);
+}
+
+.va-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.va-image-note {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 28px rgba(10, 40, 80, 0.12);
+}
+
+.va-note-icon {
+  display: flex;
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  color: #0870d8;
+  background: #e6f3ff;
+  font-size: 23px;
+}
+
+.va-note-title {
+  margin: 0 0 3px;
+  color: #102345;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.va-note-text {
+  margin: 0;
+  color: #667c99;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.va-principles {
+  margin-top: 56px;
+  padding: 35px 0;
+  border-top: 1px solid #e1ecf7;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.va-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+}
+
+.va-principle {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 12px 22px;
+  min-width: 0;
+}
+
+.va-principle:first-child {
+  padding-left: 0;
+}
+
+.va-principle + .va-principle {
+  border-left: 1px solid #dce8f7;
+}
+
+.va-principle-icon {
+  display: flex;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #0870d8;
+  background: #e5f2ff;
+  font-size: 28px;
+}
+
+.va-principle:nth-child(even) .va-principle-icon {
+  color: #00a982;
+  background: #e2f8f0;
+}
+
+.va-principle-title {
+  margin: 5px 0 8px;
+  color: #102345;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.va-principle-description {
+  margin: 0;
+  color: #6a7f9c;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+@media (min-width: 1500px) {
+  .va-container {
+    width: min(1400px, calc(100% - 100px));
+  }
+}
+
+@media (max-width: 1000px) {
+  .vedora-about {
+    padding-top: 56px;
+  }
+
+  .va-container {
+    width: calc(100% - 44px);
+  }
+
+  .va-main {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: 28px;
+  }
+
+  .va-heading {
+    font-size: clamp(32px, 4.4vw, 45px);
+    letter-spacing: -1px;
+  }
+
+  .va-description {
+    font-size: 15px;
+  }
+
+  .va-highlight {
+    gap: 10px;
+    padding: 15px 12px;
+  }
+
+  .va-icon {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+    font-size: 23px;
+  }
+
+  .va-highlight-value {
+    font-size: 16px;
+  }
+
+  .va-principles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 22px;
+  }
+
+  .va-principle {
+    padding: 12px 16px;
+  }
+
+  .va-principle:nth-child(odd) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .va-principle:nth-child(even) {
+    border-left: 1px solid #dce8f7;
+  }
+}
+
+@media (max-width: 680px) {
+  .vedora-about {
+    padding-top: 42px;
+  }
+
+  .va-container {
+    width: calc(100% - 36px);
+  }
+
+  .va-main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .va-eyebrow {
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .va-eyebrow::before {
+    width: 30px;
+    flex-basis: 30px;
+  }
+
+  .va-heading {
+    margin-bottom: 16px;
+    font-size: clamp(34px, 9vw, 46px);
+    line-height: 1.13;
+  }
+
+  .va-description {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .va-highlights {
+    margin-top: 22px;
+  }
+
+  .va-highlight {
+    gap: 10px;
+    padding: 14px 10px;
+  }
+
+  .va-icon {
+    width: 35px;
+    height: 35px;
+    flex-basis: 35px;
+    border-radius: 11px;
+    font-size: 20px;
+  }
+
+  .va-highlight-value {
+    font-size: 14px;
+  }
+
+  .va-highlight-label {
+    font-size: 11px;
+  }
+
+  .va-image-frame {
+    aspect-ratio: 1 / 0.86;
+    border-radius: 22px;
+  }
+
+  .va-image-note {
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    padding: 12px;
+  }
+
+  .va-principles {
+    margin-top: 36px;
+    padding: 25px 0;
+  }
+
+  .va-principles-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .va-principle,
+  .va-principle:first-child,
+  .va-principle:nth-child(odd),
+  .va-principle:nth-child(even) {
+    padding: 18px 0;
+    border-left: 0;
+  }
+
+  .va-principle + .va-principle {
+    border-top: 1px solid #e1ecf7;
+  }
+}
+
+/* ============================================================
+   PRODUCTS COMPONENT  (vd-products) â€” banner layout
+   ============================================================ */
+
+.vd-products {
+  --vd-blue:  #0868c9;
+  --vd-teal:  #10b99a;
+  --vd-navy:  #0b1e3d;
+  --vd-text:  #3d5a7a;
+  padding: 0;
+  background: transparent;
+  font-family: inherit;
+}
+
+.vd-products *,
+.vd-products *::before,
+.vd-products *::after {
+  box-sizing: border-box;
+}
+
+/* Banner: simple two-column flex */
+.vd-products__banner {
+  display: flex;
+  align-items: stretch;
+  min-height: 460px;
+  overflow: hidden;
+  border-radius: 28px;
+  margin: 48px clamp(20px, 5vw, 64px);
+  box-shadow: 0 24px 64px rgba(10, 40, 80, 0.13);
+}
+
+/* Left: solid opaque text panel */
+.vd-products__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 42%;
+  padding: 56px 48px;
+  background: #eef6ff;
+}
+
+/* Right: product image */
+.vd-products__visual {
+  flex: 1;
+  background-image: url("/img/product-bg.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #dff0fb;
+}
+
+/* â”€â”€ Eyebrow â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.vd-products__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: var(--vd-blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.vd-products__eyebrow::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--vd-blue), var(--vd-teal));
+  flex-shrink: 0;
+}
+
+/* â”€â”€ Heading â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.vd-products__heading {
+  margin: 0 0 20px;
+  color: var(--vd-navy);
+  font-size: clamp(32px, 3.6vw, 54px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.vd-products__heading span {
+  color: var(--vd-blue);
+}
+
+/* â”€â”€ Description â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.vd-products__description {
+  margin: 0;
+  color: var(--vd-text);
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 440px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .vd-products__banner { min-height: 380px; margin: 36px clamp(16px, 4vw, 40px); }
+  .vd-products__copy   { flex: 0 0 50%; padding: 44px 36px; }
+}
+
+@media (max-width: 640px) {
+  .vd-products__banner  { flex-direction: column; min-height: auto; margin: 24px 16px; border-radius: 20px; }
+  .vd-products__copy    { flex: none; width: 100%; padding: 36px 24px; background: #eef6ff; }
+  .vd-products__visual  { min-height: 220px; }
+  .vd-products__heading { font-size: 28px; letter-spacing: -0.8px; }
+  .vd-products__description { font-size: 14.5px; }
+}
+
+

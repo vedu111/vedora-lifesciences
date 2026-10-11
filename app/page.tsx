@@ -1,8 +1,7 @@
-import { CtaBand } from "../components/CtaBand";
 import { Faq } from "../components/home/Faq";
 import { Hero } from "../components/home/Hero";
 import { Location } from "../components/home/Location";
-import AboutUs from "../components/home/aboutus";
+import AboutUs from "../components/home/AboutUs";
 import { Testimonials } from "../components/home/Testimonials";
 import  Product   from "../components/home/Products";
 import { clinic } from "../lib/clinic";

@@ -116,15 +116,16 @@ export function SiteNav() {
             menuOpen ? " open" : ""
           }`}
           id="navMenu"
+          style={{ flex: 1 }}
         >
           <ul
-            className="navbar-nav flex-lg-row align-items-lg-center mb-0 ms-lg-auto"
+            className="navbar-nav flex-lg-row align-items-lg-center mb-0"
             style={{
               listStyle: "none",
               paddingLeft: 0,
-              gap: 2,
               display: "flex",
               flexDirection: "column",
+              flex: 1,
             }}
           >
             {hashLinks.map((link) => (
@@ -142,9 +143,7 @@ export function SiteNav() {
             ))}
           </ul>
 
-          <div className="nav-cta-wrap d-flex align-items-center gap-3 ms-lg-4">
-            
-
+          <div className="nav-cta-wrap d-flex align-items-center gap-3">
             <a
               className="btn btn-coral nav-contact-btn"
               href={homeHref("location")}
@@ -158,44 +157,6 @@ export function SiteNav() {
       </nav>
 
       <style jsx>{`
-        .site-nav {
-          position: sticky;
-          top: 0;
-          z-index: 1000;
-          width: 100%;
-          background: rgba(255, 255, 255, 0.97);
-          border-bottom: 1px solid #e0ebf7;
-          transition: box-shadow 180ms ease,
-            background 180ms ease;
-        }
-
-        .site-nav.scrolled {
-          background: rgba(255, 255, 255, 0.98);
-          box-shadow: 0 5px 22px rgba(14, 50, 90, 0.08);
-        }
-
-        .nav-address {
-          display: inline-flex;
-          align-items: center;
-          gap: 12px;
-          color: #102345;
-          font-size: 13px;
-          font-weight: 500;
-          line-height: 1.5;
-          text-decoration: none;
-        }
-
-        .nav-address-icon {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #0870d8;
-        }
-
-        .nav-address-text {
-          white-space: nowrap;
-        }
-
         .nav-contact-btn {
           display: inline-flex;
           min-height: 50px;
