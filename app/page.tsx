@@ -9,8 +9,7 @@ import { clinic } from "../lib/clinic";
 
 export const metadata = {
   title: "VEDORA LIFESCIENCES | Connecting Healthcare, Delivering Trust",
-  description:
-    "VEDORA LIFESCIENCES is a B2B healthcare distribution business connecting manufacturers and authorised suppliers with pharmacies, healthcare retailers, wellness stores, and eligible institutions. Explore our nutraceuticals and healthcare products.",
+description: "Trusted B2B distribution of nutraceuticals and healthcare products across India.",
 };
 
 export default function HomePage() {
