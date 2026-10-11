@@ -6,9 +6,11 @@ import { Testimonials } from "../components/home/Testimonials";
 import  Product   from "../components/home/Products";
 import { clinic } from "../lib/clinic";
 
+
 export const metadata = {
-  title: "Restore Physical Therapy | Recover Movement, Rebuild Strength",
-  description: "Doctor-led physical therapy in Portland for sports injuries, post-surgery recovery, and back and neck pain.",
+  title: "VEDORA LIFESCIENCES | Connecting Healthcare, Delivering Trust",
+  description:
+    "VEDORA LIFESCIENCES is a B2B healthcare distribution business connecting manufacturers and authorised suppliers with pharmacies, healthcare retailers, wellness stores, and eligible institutions. Explore our nutraceuticals and healthcare products.",
 };
 
 export default function HomePage() {
