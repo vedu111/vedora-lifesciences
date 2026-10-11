@@ -2,12 +2,11 @@ import Script from "next/script";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteNav } from "../components/SiteNav";
 import { SkipLink } from "../components/SkipLink";
-import { TopBar } from "../components/TopBar";
 import "./globals.css";
 
 export const metadata = {
-  title: "Restore Physical Therapy",
-  description: "Doctor-led physical therapy and rehabilitation in Portland.",
+  title: "Vedora Lifesciences",
+  description: "Connecting Healthcare, Delivering Trust.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -23,7 +22,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <SkipLink />
-        <TopBar />
         <SiteNav />
         {children}
         <SiteFooter />

@@ -1,6 +1,6 @@
-Restore Physical Therapy
+Vedora Lifesciences
 
-This project uses the Next.js App Router. The full home and treatments page markup and browser interactions are embedded in their route modules, with shared Bootstrap and custom styles.
+This project uses the Next.js App Router. The home page markup and browser interactions live in the route module, with shared Bootstrap and custom styles.
 
 ## Run locally
 
@@ -8,9 +8,8 @@ Install dependencies with `npm install`, then start the development server with 
 
 ## Project structure
 
-- `app/` — root layout, global styles, and `/` and `/services` routes
+- `app/` — root layout, global styles, and `/` route
 - `app/page.tsx` — home page markup and interactions
-- `app/services/page.tsx` — treatments page markup and interactions
 - `public/` — images
 - `css/` — Bootstrap and custom stylesheets
 

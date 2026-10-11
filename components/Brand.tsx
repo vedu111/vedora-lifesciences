@@ -1,18 +1,18 @@
+import Image from "next/image";
 import Link from "next/link";
-import { IconPulse } from "./icons";
 
 export function Brand() {
   return (
-    <Link className="brand" href="/" aria-label="Restore Physical Therapy home">
-      <span className="brand-mark" aria-hidden="true">
-        <IconPulse />
-      </span>
-      <span>
-        <span className="brand-name">
-          Restore<span>.</span>
-        </span>
-        <span className="brand-sub">Physical Therapy</span>
-      </span>
+    <Link className="brand" href="/" aria-label="Vedora Lifesciences home">
+      <Image
+        src="/img/vedora-logo.png"
+        alt="Vedora Lifesciences"
+        width={1920}
+        height={819}
+        className="brand-logo"
+        sizes="280px"
+        priority
+      />
     </Link>
   );
 }
