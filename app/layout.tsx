@@ -1,4 +1,8 @@
 import Script from "next/script";
+import { SiteFooter } from "../components/SiteFooter";
+import { SiteNav } from "../components/SiteNav";
+import { SkipLink } from "../components/SkipLink";
+import { TopBar } from "../components/TopBar";
 import "./globals.css";
 
 export const metadata = {
@@ -6,7 +10,7 @@ export const metadata = {
   description: "Doctor-led physical therapy and rehabilitation in Portland.",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -18,7 +22,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <SkipLink />
+        <TopBar />
+        <SiteNav />
         {children}
+        <SiteFooter />
         <Script id="enable-js" strategy="beforeInteractive">
           {`document.documentElement.classList.add("js");`}
         </Script>
