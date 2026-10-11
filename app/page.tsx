@@ -1,19 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-<script>document.documentElement.classList.add('js')</script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Restore Physical Therapy — Recover Movement, Rebuild Strength</title>
-<meta name="description" content="Restore is a doctor-led physical therapy and physiotherapy clinic. One-on-one sports injury, post-surgery, back and neck pain rehab. Direct access — no referral needed. Book your appointment today.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700;800&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
+import Script from "next/script";
+
+export const metadata = {
+  title: "Restore Physical Therapy | Recover Movement, Rebuild Strength",
+  description: "Doctor-led physical therapy in Portland for sports injuries, post-surgery recovery, and back and neck pain.",
+};
+
+const pageMarkup = `<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- ============ TOP BAR ============ -->
 <div class="topbar">
@@ -35,7 +27,7 @@
 <!-- ============ NAVBAR ============ -->
 <header class="site-nav">
   <nav class="container d-flex align-items-center justify-content-between flex-wrap" aria-label="Primary">
-    <a class="brand" href="index.html" aria-label="Restore Physical Therapy home">
+    <a class="brand" href="/" aria-label="Restore Physical Therapy home">
       <span class="brand-mark" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg>
       </span>
@@ -55,7 +47,7 @@
         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="#team">Therapists</a></li>
         <li class="nav-item"><a class="nav-link" href="#journey">Process</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Treatments</a></li>
+        <li class="nav-item"><a class="nav-link" href="/services">Treatments</a></li>
         <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
       </ul>
       <div class="nav-cta-wrap d-flex align-items-center gap-3 ms-lg-4">
@@ -143,7 +135,7 @@
 
       <div class="col-lg-6">
         <div class="hero-visual">
-          <img class="hero-img" src="img/hero-therapy.jpg" width="720" height="612" fetchpriority="high" alt="Physical therapist guiding a patient through a resistance-band exercise in a bright modern clinic">
+          <img class="hero-img" src="/img/hero-therapy.jpg" width="720" height="612" fetchpriority="high" alt="Physical therapist guiding a patient through a resistance-band exercise in a bright modern clinic">
           <div class="hero-badge-card">
             <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8 8 11 4.5-3 8-6 8-11V5l-8-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
             <span>
@@ -196,7 +188,7 @@
           <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
           <h3>Sports Injuries</h3>
           <p>Sprains, strains, ligament tears and overuse injuries — assessed, taped and rehabbed so you return to your sport safely and confidently.</p>
-          <a class="svc-link" href="services.html#sports">Explore treatment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="svc-link" href="/services#sports">Explore treatment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal reveal-d1">
@@ -204,7 +196,7 @@
           <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/><path d="M3.5 12h4l1.5-3 2 5 1.5-3h4"/></svg></div>
           <h3>Post-Surgery Rehab</h3>
           <p>Structured, surgeon-aligned protocols for ACL, rotator cuff, joint replacement and spine surgery — rebuilding range, strength and trust in your body.</p>
-          <a class="svc-link" href="services.html#post-op">Explore treatment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="svc-link" href="/services#post-op">Explore treatment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal reveal-d2">
@@ -212,7 +204,7 @@
           <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2.2"/><path d="M12 7v7M12 9l-4 2M12 9l4 2M9 21l3-7 3 7"/></svg></div>
           <h3>Back &amp; Neck Pain</h3>
           <p>Sciatica, herniated discs, whiplash and stubborn desk-posture pain. We calm the flare-up, then fix the mechanics that keep it coming back.</p>
-          <a class="svc-link" href="services.html#spine">Explore treatment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="svc-link" href="/services#spine">Explore treatment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal">
@@ -220,7 +212,7 @@
           <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v7M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 0 1 4 0v6a8 8 0 0 1-8 8h-2a8 8 0 0 1-7-4l-2.5-4a2 2 0 0 1 3.5-2L8 15"/></svg></div>
           <h3>Manual Therapy</h3>
           <p>Skilled hands-on joint mobilization, soft-tissue release and myofascial work that restores motion medication and rest alone can't reach.</p>
-          <a class="svc-link" href="services.html#manual">Explore treatment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="svc-link" href="/services#manual">Explore treatment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal reveal-d1">
@@ -228,7 +220,7 @@
           <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3 21 7M18 4 8.5 13.5M14 8l-9 9-2 4 4-2 9-9"/></svg></div>
           <h3>Dry Needling</h3>
           <p>Targeted trigger-point needling to release deep muscle knots, reduce spasm and switch off referred pain — often within a session or two.</p>
-          <a class="svc-link" href="services.html#needling">Explore treatment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="svc-link" href="/services#needling">Explore treatment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal reveal-d2">
@@ -236,7 +228,7 @@
           <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M17 3h4v4"/></svg></div>
           <h3>Sports Performance</h3>
           <p>Movement screens, strength testing and return-to-sport programming for athletes who want to come back faster — and finish stronger.</p>
-          <a class="svc-link" href="services.html#performance">Explore treatment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="svc-link" href="/services#performance">Explore treatment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
     </div>
@@ -249,7 +241,7 @@
     <div class="row align-items-center g-5">
       <div class="col-lg-5">
         <div class="why-img-wrap">
-          <img class="why-img" src="img/why-clinic.jpg" width="520" height="572" loading="lazy" alt="Physical therapist performing hands-on manual therapy on a patient's shoulder in a treatment room">
+          <img class="why-img" src="/img/why-clinic.jpg" width="520" height="572" loading="lazy" alt="Physical therapist performing hands-on manual therapy on a patient's shoulder in a treatment room">
           <div class="why-stat-card">
             <div class="n">1-on-1</div>
             <div class="t">Full-hour sessions with your therapist — never handed off to an aide</div>
@@ -294,7 +286,7 @@
     <div class="row g-4 mt-2">
       <div class="col-sm-6 col-lg-3 reveal">
         <div class="tp-card">
-          <div class="tp-photo"><img src="img/therapist-alvarez.jpg" width="320" height="320" loading="lazy" alt="Portrait of Dr. Marcus Alvarez, physical therapist"><span class="tp-cred">PT · DPT · OCS</span></div>
+          <div class="tp-photo"><img src="/img/therapist-alvarez.jpg" width="320" height="320" loading="lazy" alt="Portrait of Dr. Marcus Alvarez, physical therapist"><span class="tp-cred">PT · DPT · OCS</span></div>
           <div class="tp-body">
             <h3>Dr. Marcus Alvarez</h3>
             <div class="tp-role">Clinic Director · Orthopedics</div>
@@ -305,7 +297,7 @@
       </div>
       <div class="col-sm-6 col-lg-3 reveal reveal-d1">
         <div class="tp-card">
-          <div class="tp-photo"><img src="img/therapist-bennett.jpg" width="320" height="320" loading="lazy" alt="Portrait of Dr. Elena Bennett, physical therapist"><span class="tp-cred">PT · DPT · SCS</span></div>
+          <div class="tp-photo"><img src="/img/therapist-bennett.jpg" width="320" height="320" loading="lazy" alt="Portrait of Dr. Elena Bennett, physical therapist"><span class="tp-cred">PT · DPT · SCS</span></div>
           <div class="tp-body">
             <h3>Dr. Elena Bennett</h3>
             <div class="tp-role">Sports Rehab Specialist</div>
@@ -316,7 +308,7 @@
       </div>
       <div class="col-sm-6 col-lg-3 reveal reveal-d2">
         <div class="tp-card">
-          <div class="tp-photo"><img src="img/therapist-okafor.jpg" width="320" height="320" loading="lazy" alt="Portrait of Dr. David Okafor, physical therapist"><span class="tp-cred">PT · DPT · CMTPT</span></div>
+          <div class="tp-photo"><img src="/img/therapist-okafor.jpg" width="320" height="320" loading="lazy" alt="Portrait of Dr. David Okafor, physical therapist"><span class="tp-cred">PT · DPT · CMTPT</span></div>
           <div class="tp-body">
             <h3>Dr. David Okafor</h3>
             <div class="tp-role">Manual Therapy &amp; Dry Needling</div>
@@ -327,7 +319,7 @@
       </div>
       <div class="col-sm-6 col-lg-3 reveal reveal-d3">
         <div class="tp-card">
-          <div class="tp-photo"><img src="img/therapist-nguyen.jpg" width="320" height="320" loading="lazy" alt="Portrait of Dr. Mai Nguyen, physical therapist"><span class="tp-cred">PT · DPT · MTC</span></div>
+          <div class="tp-photo"><img src="/img/therapist-nguyen.jpg" width="320" height="320" loading="lazy" alt="Portrait of Dr. Mai Nguyen, physical therapist"><span class="tp-cred">PT · DPT · MTC</span></div>
           <div class="tp-body">
             <h3>Dr. Mai Nguyen</h3>
             <div class="tp-role">Spine &amp; Chronic Pain</div>
@@ -445,7 +437,7 @@
             <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
             <blockquote>Nine months after my knee surgery I ran a half marathon. Dr. Bennett mapped out every phase and never let me rush it or hold back. I trust my knee completely now.</blockquote>
             <div class="who">
-              <img src="img/patient-jordan.jpg" width="54" height="54" loading="lazy" alt="Patient Jordan Ellis">
+              <img src="/img/patient-jordan.jpg" width="54" height="54" loading="lazy" alt="Patient Jordan Ellis">
               <span><span class="nm">Jordan Ellis</span><span class="mt">Recreational runner</span></span>
             </div>
           </div>
@@ -457,7 +449,7 @@
             <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
             <blockquote>I'd lived with back pain for years and assumed it was permanent. Dr. Nguyen found the real cause in one visit. Six weeks later I'm gardening and sleeping through the night again.</blockquote>
             <div class="who">
-              <img src="img/patient-diane.jpg" width="54" height="54" loading="lazy" alt="Patient Diane Whitmore">
+              <img src="/img/patient-diane.jpg" width="54" height="54" loading="lazy" alt="Patient Diane Whitmore">
               <span><span class="nm">Diane Whitmore</span><span class="mt">Retired teacher</span></span>
             </div>
           </div>
@@ -469,7 +461,7 @@
             <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
             <blockquote>A few dry-needling sessions with Dr. Okafor released a shoulder that two other clinics couldn't budge. The hands-on work here is genuinely a different level.</blockquote>
             <div class="who">
-              <img src="img/patient-ray.jpg" width="54" height="54" loading="lazy" alt="Patient Ray Coleman">
+              <img src="/img/patient-ray.jpg" width="54" height="54" loading="lazy" alt="Patient Ray Coleman">
               <span><span class="nm">Ray Coleman</span><span class="mt">Warehouse supervisor</span></span>
             </div>
           </div>
@@ -481,7 +473,7 @@
             <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
             <blockquote>The full hour of one-on-one time made all the difference after my knee replacement. Dr. Alvarez pushed me exactly the right amount. I'm back on the golf course a month ahead of schedule.</blockquote>
             <div class="who">
-              <img src="img/patient-jordan.jpg" width="54" height="54" loading="lazy" alt="Patient Harold Pratt">
+              <img src="/img/patient-jordan.jpg" width="54" height="54" loading="lazy" alt="Patient Harold Pratt">
               <span><span class="nm">Harold Pratt</span><span class="mt">Weekend golfer</span></span>
             </div>
           </div>
@@ -638,7 +630,7 @@
   <div class="container">
     <div class="row g-4">
       <div class="col-lg-4">
-        <a class="brand" href="index.html" aria-label="Restore Physical Therapy home">
+        <a class="brand" href="/" aria-label="Restore Physical Therapy home">
           <span class="brand-mark" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg>
           </span>
@@ -658,11 +650,11 @@
       <div class="col-6 col-lg-2 footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html#sports">Sports injuries</a></li>
-          <li><a href="services.html#post-op">Post-surgery rehab</a></li>
-          <li><a href="services.html#spine">Back &amp; neck pain</a></li>
-          <li><a href="services.html#manual">Manual therapy</a></li>
-          <li><a href="services.html#needling">Dry needling</a></li>
+          <li><a href="/services#sports">Sports injuries</a></li>
+          <li><a href="/services#post-op">Post-surgery rehab</a></li>
+          <li><a href="/services#spine">Back &amp; neck pain</a></li>
+          <li><a href="/services#manual">Manual therapy</a></li>
+          <li><a href="/services#needling">Dry needling</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 footer-col">
@@ -687,9 +679,389 @@
       <span>Built with Bootstrap 5 · <a href="#home">Back to top</a></span>
     </div>
   </div>
-</footer>
+</footer>`;
+const pageBehavior = `/* ============================================================
+   RESTORE — vanilla JavaScript (no jQuery)
+   One function per feature · guard clauses · IntersectionObserver
+   Honours prefers-reduced-motion.
+   ============================================================ */
+(function () {
+  "use strict";
 
-<script src="js/vendor/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>
-</body>
-</html>
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- Mobile navigation ---------- */
+  function initMobileNav() {
+    var toggle = document.querySelector(".nav-toggle");
+    var menu = document.getElementById("navMenu");
+    if (!toggle || !menu) return;
+
+    function close() {
+      menu.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+    function open() {
+      menu.classList.add("open");
+      toggle.setAttribute("aria-expanded", "true");
+    }
+    toggle.addEventListener("click", function () {
+      var expanded = toggle.getAttribute("aria-expanded") === "true";
+      expanded ? close() : open();
+    });
+    // Close when a link is tapped (mobile)
+    menu.addEventListener("click", function (e) {
+      if (e.target.closest("a") && window.innerWidth < 992) close();
+    });
+    // Close on Escape
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") close();
+    });
+    // Reset when resizing to desktop
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 992) close();
+    });
+  }
+
+  /* ---------- Navbar shadow on scroll ---------- */
+  function initNavScroll() {
+    var nav = document.querySelector(".site-nav");
+    if (!nav) return;
+    function onScroll() {
+      nav.classList.toggle("scrolled", window.scrollY > 8);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  /* ---------- Active nav link (scroll spy) ---------- */
+  function initScrollSpy() {
+    var links = Array.prototype.slice.call(
+      document.querySelectorAll('.site-nav .nav-link[href^="#"]')
+    );
+    if (!links.length) return;
+    var sections = links
+      .map(function (l) {
+        var id = l.getAttribute("href");
+        return id.length > 1 ? document.querySelector(id) : null;
+      })
+      .filter(Boolean);
+    if (!sections.length) return;
+
+    var obs = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          links.forEach(function (l) {
+            l.classList.toggle(
+              "active",
+              l.getAttribute("href") === "#" + entry.target.id
+            );
+          });
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+    );
+    sections.forEach(function (s) { obs.observe(s); });
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  function initReveal() {
+    var els = document.querySelectorAll(".reveal");
+    if (!els.length) return;
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      els.forEach(function (el) { el.classList.add("in"); });
+      return;
+    }
+    var obs = new IntersectionObserver(
+      function (entries, o) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            o.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+    els.forEach(function (el) { obs.observe(el); });
+  }
+
+  /* ---------- Count-up statistics ---------- */
+  function initCountUp() {
+    var nums = document.querySelectorAll("[data-count]");
+    if (!nums.length) return;
+
+    function run(el) {
+      var target = parseFloat(el.getAttribute("data-count"));
+      var decimals = (el.getAttribute("data-decimals") || "0") | 0;
+      var suffix = el.getAttribute("data-suffix") || "";
+      if (reduceMotion) {
+        el.textContent = target.toFixed(decimals) + suffix;
+        return;
+      }
+      var start = null;
+      var dur = 1600;
+      function step(ts) {
+        if (start === null) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = (target * eased).toFixed(decimals) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = target.toFixed(decimals) + suffix;
+      }
+      requestAnimationFrame(step);
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      nums.forEach(run);
+      return;
+    }
+    var obs = new IntersectionObserver(
+      function (entries, o) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            run(entry.target);
+            o.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    nums.forEach(function (n) { obs.observe(n); });
+  }
+
+  /* ---------- Testimonials slider ---------- */
+  function initTestimonials() {
+    var slider = document.querySelector("[data-tslider]");
+    if (!slider) return;
+    var track = slider.querySelector(".ttrack");
+    var slides = slider.querySelectorAll(".tslide");
+    var prev = slider.querySelector("[data-tprev]");
+    var next = slider.querySelector("[data-tnext]");
+    var dotsWrap = slider.querySelector("[data-tdots]");
+    if (!track || !slides.length) return;
+
+    var index = 0;
+
+    function perView() {
+      return window.innerWidth >= 768 ? 2 : 1;
+    }
+    function maxIndex() {
+      return Math.max(0, slides.length - perView());
+    }
+    function buildDots() {
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = "";
+      var count = maxIndex() + 1;
+      for (var i = 0; i < count; i++) {
+        var b = document.createElement("button");
+        b.className = "tdot";
+        b.type = "button";
+        b.setAttribute("aria-label", "Go to testimonial group " + (i + 1));
+        (function (i) {
+          b.addEventListener("click", function () { go(i); });
+        })(i);
+        dotsWrap.appendChild(b);
+      }
+    }
+    function update() {
+      var slideW = 100 / perView();
+      track.style.transform = "translateX(-" + index * slideW + "%)";
+      if (dotsWrap) {
+        var dots = dotsWrap.querySelectorAll(".tdot");
+        dots.forEach(function (d, i) { d.classList.toggle("active", i === index); });
+      }
+    }
+    function go(i) {
+      index = Math.max(0, Math.min(i, maxIndex()));
+      update();
+    }
+    if (next) next.addEventListener("click", function () {
+      index = index >= maxIndex() ? 0 : index + 1;
+      update();
+    });
+    if (prev) prev.addEventListener("click", function () {
+      index = index <= 0 ? maxIndex() : index - 1;
+      update();
+    });
+
+    // Keyboard support
+    slider.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight" && next) next.click();
+      if (e.key === "ArrowLeft" && prev) prev.click();
+    });
+
+    // Basic touch/swipe
+    var startX = 0, dragging = false;
+    track.addEventListener("touchstart", function (e) { startX = e.touches[0].clientX; dragging = true; }, { passive: true });
+    track.addEventListener("touchend", function (e) {
+      if (!dragging) return;
+      dragging = false;
+      var dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 45) { dx < 0 ? (next && next.click()) : (prev && prev.click()); }
+    });
+
+    var resizeTimer;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        if (index > maxIndex()) index = maxIndex();
+        buildDots();
+        update();
+      }, 150);
+    });
+
+    buildDots();
+    update();
+  }
+
+  /* ---------- Service / condition filtering (services.html) ---------- */
+  function initFilter() {
+    var bar = document.querySelector("[data-filter-bar]");
+    if (!bar) return;
+    var buttons = bar.querySelectorAll(".filter-btn");
+    var items = document.querySelectorAll("[data-cat]");
+    if (!items.length) return;
+
+    bar.addEventListener("click", function (e) {
+      var btn = e.target.closest(".filter-btn");
+      if (!btn) return;
+      var cat = btn.getAttribute("data-filter");
+      buttons.forEach(function (b) {
+        b.classList.toggle("active", b === btn);
+        b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+      });
+      items.forEach(function (item) {
+        var match = cat === "all" || item.getAttribute("data-cat") === cat;
+        item.style.display = match ? "" : "none";
+      });
+    });
+  }
+
+  /* ---------- Appointment / booking form validation ---------- */
+  function initForms() {
+    var forms = document.querySelectorAll("[data-validate]");
+    if (!forms.length) return;
+
+    forms.forEach(function (form) {
+      form.setAttribute("novalidate", "novalidate");
+      var success = form.querySelector(".form-success");
+
+      function validateField(field) {
+        var group = field.closest(".mb-3, .col, .field") || field.parentElement;
+        var err = group ? group.querySelector(".field-error") : null;
+        var valid = true;
+        var isCheckable = field.type === "checkbox" || field.type === "radio";
+        var value = isCheckable ? (field.checked ? "on" : "") : (field.value || "").trim();
+
+        if (field.hasAttribute("required") && !value) valid = false;
+        if (valid && field.type === "email" && value) {
+          valid = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(value);
+        }
+        if (valid && field.type === "tel" && value) {
+          valid = value.replace(/[^\\d]/g, "").length >= 7;
+        }
+        field.classList.toggle("is-invalid", !valid);
+        field.setAttribute("aria-invalid", valid ? "false" : "true");
+        if (err) err.classList.toggle("show", !valid);
+        return valid;
+      }
+
+      var fields = form.querySelectorAll("input, select, textarea");
+      fields.forEach(function (f) {
+        f.addEventListener("blur", function () { validateField(f); });
+        f.addEventListener("input", function () {
+          if (f.classList.contains("is-invalid")) validateField(f);
+        });
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var allValid = true;
+        var firstBad = null;
+        fields.forEach(function (f) {
+          if (f.type === "hidden") return;
+          if (!validateField(f)) {
+            allValid = false;
+            if (!firstBad) firstBad = f;
+          }
+        });
+        if (!allValid) {
+          if (firstBad) firstBad.focus();
+          return;
+        }
+        if (success) {
+          success.classList.add("show");
+          form.reset();
+          fields.forEach(function (f) { f.classList.remove("is-invalid"); });
+          success.focus && success.focus();
+          setTimeout(function () { success.classList.remove("show"); }, 6000);
+        }
+      });
+    });
+  }
+
+  /* ---------- Set min date on date inputs to today ---------- */
+  function initDateMin() {
+    var inputs = document.querySelectorAll('input[type="date"]');
+    if (!inputs.length) return;
+    var today = new Date().toISOString().split("T")[0];
+    inputs.forEach(function (i) {
+      if (!i.getAttribute("min")) i.setAttribute("min", today);
+    });
+  }
+
+  /* ---------- Footer year ---------- */
+  function initYear() {
+    var el = document.querySelector("[data-year]");
+    if (el) el.textContent = new Date().getFullYear();
+  }
+
+  function initAccordion() {
+    document.addEventListener("click", function (event) {
+      var button = event.target.closest('[data-bs-toggle="collapse"]');
+      if (!button) return;
+      var target = document.querySelector(button.getAttribute("data-bs-target"));
+      if (!target) return;
+      var opening = !target.classList.contains("show");
+      var parent = button.closest("[data-bs-parent]");
+      if (opening && parent) {
+        parent.querySelectorAll(".accordion-collapse.show").forEach(function (panel) {
+          panel.classList.remove("show");
+          var trigger = parent.querySelector('[data-bs-target="#' + panel.id + '"]');
+          if (trigger) {
+            trigger.classList.add("collapsed");
+            trigger.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+      target.classList.toggle("show", opening);
+      button.classList.toggle("collapsed", !opening);
+      button.setAttribute("aria-expanded", String(opening));
+    });
+  }
+
+  /* ---------- Init all ---------- */
+    initAccordion();
+    initMobileNav();
+    initNavScroll();
+    initScrollSpy();
+    initReveal();
+    initCountUp();
+    initTestimonials();
+    initFilter();
+    initForms();
+    initDateMin();
+    initYear();
+})();`;
+
+export default function Page() {
+  return (
+    <>
+      <div dangerouslySetInnerHTML={{ __html: pageMarkup }} />
+      <Script id="home-behavior" strategy="afterInteractive">
+        {pageBehavior}
+      </Script>
+    </>
+  );
+}

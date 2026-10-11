@@ -1,19 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-<script>document.documentElement.classList.add('js')</script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Treatments & Booking — Restore Physical Therapy</title>
-<meta name="description" content="Explore Restore's physical therapy treatments — sports injury care, post-surgery rehab, back and neck pain, manual therapy, dry needling and sports performance. Transparent pricing and easy online booking. No referral needed.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700;800&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
+import Script from "next/script";
+
+export const metadata = {
+  title: "Treatments & Booking | Restore Physical Therapy",
+  description: "Explore physical therapy treatments, transparent pricing, and appointment booking at Restore Physical Therapy.",
+};
+
+const pageMarkup = `<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- ============ TOP BAR ============ -->
 <div class="topbar">
@@ -23,7 +15,7 @@
       Direct access — no referral needed
     </span>
     <div class="top-links">
-      <a class="hide-sm" href="index.html#location">312 Harbor Point Dr, Portland</a>
+      <a class="hide-sm" href="/#location">312 Harbor Point Dr, Portland</a>
       <span class="divider hide-sm">|</span>
       <a href="tel:+15035550142">
         Call (503) 555-0142
@@ -35,7 +27,7 @@
 <!-- ============ NAVBAR ============ -->
 <header class="site-nav">
   <nav class="container d-flex align-items-center justify-content-between flex-wrap" aria-label="Primary">
-    <a class="brand" href="index.html" aria-label="Restore Physical Therapy home">
+    <a class="brand" href="/" aria-label="Restore Physical Therapy home">
       <span class="brand-mark" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg>
       </span>
@@ -51,12 +43,12 @@
 
     <div class="nav-menu d-lg-flex align-items-lg-center" id="navMenu">
       <ul class="navbar-nav flex-lg-row align-items-lg-center mb-0 ms-lg-auto" style="list-style:none;padding-left:0;gap:2px;display:flex;flex-direction:column;">
-        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#team">Therapists</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#journey">Process</a></li>
-        <li class="nav-item"><a class="nav-link active" href="services.html" aria-current="page">Treatments</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#team">Therapists</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#journey">Process</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/services" aria-current="page">Treatments</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#faq">FAQ</a></li>
       </ul>
       <div class="nav-cta-wrap d-flex align-items-center gap-3 ms-lg-4">
         <a class="nav-phone d-none d-xl-inline-flex" href="tel:+15035550142">
@@ -78,7 +70,7 @@
 <section class="page-head">
   <div class="container">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="index.html">Home</a><span>/</span>Treatments &amp; Booking
+      <a href="/">Home</a><span>/</span>Treatments &amp; Booking
     </nav>
     <h1>Treatments built around <span style="color:var(--teal)">your recovery</span></h1>
     <p>Every program starts with a full 60-minute evaluation, then a hands-on plan tailored to your goals. Browse what we treat, see transparent session pricing, and book your first visit in under a minute.</p>
@@ -104,7 +96,7 @@
       <div class="col-md-6 col-lg-4 reveal" data-cat="sports" id="sports">
         <div class="treat-card">
           <div class="treat-media">
-            <img src="img/treat-sports.jpg" width="640" height="400" loading="lazy" alt="Physical therapist taping an athlete's injured ankle in a clinic">
+            <img src="/img/treat-sports.jpg" width="640" height="400" loading="lazy" alt="Physical therapist taping an athlete's injured ankle in a clinic">
             <span class="tag">Sports injuries</span>
           </div>
           <div class="treat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
@@ -129,7 +121,7 @@
       <div class="col-md-6 col-lg-4 reveal reveal-d1" data-cat="rehab" id="post-op">
         <div class="treat-card">
           <div class="treat-media">
-            <img src="img/treat-post-op.jpg" width="640" height="400" loading="lazy" alt="Therapist guiding a post-surgery patient through knee bending exercises on a treatment table">
+            <img src="/img/treat-post-op.jpg" width="640" height="400" loading="lazy" alt="Therapist guiding a post-surgery patient through knee bending exercises on a treatment table">
             <span class="tag">Post-surgery</span>
           </div>
           <div class="treat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/><path d="M3.5 12h4l1.5-3 2 5 1.5-3h4"/></svg></div>
@@ -154,7 +146,7 @@
       <div class="col-md-6 col-lg-4 reveal reveal-d2" data-cat="pain" id="spine">
         <div class="treat-card">
           <div class="treat-media">
-            <img src="img/treat-spine.jpg" width="640" height="400" loading="lazy" alt="Physical therapist assessing a patient's lower back and spine posture">
+            <img src="/img/treat-spine.jpg" width="640" height="400" loading="lazy" alt="Physical therapist assessing a patient's lower back and spine posture">
             <span class="tag">Pain &amp; spine</span>
           </div>
           <div class="treat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2.2"/><path d="M12 7v7M12 9l-4 2M12 9l4 2M9 21l3-7 3 7"/></svg></div>
@@ -179,7 +171,7 @@
       <div class="col-md-6 col-lg-4 reveal" data-cat="handson" id="manual">
         <div class="treat-card">
           <div class="treat-media">
-            <img src="img/treat-manual.jpg" width="640" height="400" loading="lazy" alt="Close-up of a therapist performing hands-on soft-tissue massage on a patient's shoulder">
+            <img src="/img/treat-manual.jpg" width="640" height="400" loading="lazy" alt="Close-up of a therapist performing hands-on soft-tissue massage on a patient's shoulder">
             <span class="tag">Hands-on therapy</span>
           </div>
           <div class="treat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v7M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 0 1 4 0v6a8 8 0 0 1-8 8h-2a8 8 0 0 1-7-4l-2.5-4a2 2 0 0 1 3.5-2L8 15"/></svg></div>
@@ -204,7 +196,7 @@
       <div class="col-md-6 col-lg-4 reveal reveal-d1" data-cat="handson" id="needling">
         <div class="treat-card">
           <div class="treat-media">
-            <img src="img/treat-needling.jpg" width="640" height="400" loading="lazy" alt="Therapist applying a thin dry-needling needle to a patient's calf muscle">
+            <img src="/img/treat-needling.jpg" width="640" height="400" loading="lazy" alt="Therapist applying a thin dry-needling needle to a patient's calf muscle">
             <span class="tag">Hands-on therapy</span>
           </div>
           <div class="treat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3 21 7M18 4 8.5 13.5M14 8l-9 9-2 4 4-2 9-9"/></svg></div>
@@ -229,7 +221,7 @@
       <div class="col-md-6 col-lg-4 reveal reveal-d2" data-cat="sports" id="performance">
         <div class="treat-card">
           <div class="treat-media">
-            <img src="img/treat-performance.jpg" width="640" height="400" loading="lazy" alt="Athlete performing a single-leg strength test while a therapist observes their form">
+            <img src="/img/treat-performance.jpg" width="640" height="400" loading="lazy" alt="Athlete performing a single-leg strength test while a therapist observes their form">
             <span class="tag">Sports &amp; performance</span>
           </div>
           <div class="treat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M17 3h4v4"/></svg></div>
@@ -427,7 +419,7 @@
         <div class="col-lg-4">
           <div class="cta-actions justify-content-lg-end">
             <a class="btn btn-coral btn-lg" href="tel:+15035550142">Call now</a>
-            <a class="btn btn-ghost-light btn-lg" href="index.html#faq">Read the FAQ</a>
+            <a class="btn btn-ghost-light btn-lg" href="/#faq">Read the FAQ</a>
           </div>
         </div>
       </div>
@@ -442,7 +434,7 @@
   <div class="container">
     <div class="row g-4">
       <div class="col-lg-4">
-        <a class="brand" href="index.html" aria-label="Restore Physical Therapy home">
+        <a class="brand" href="/" aria-label="Restore Physical Therapy home">
           <span class="brand-mark" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg>
           </span>
@@ -462,20 +454,20 @@
       <div class="col-6 col-lg-2 footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html#sports">Sports injuries</a></li>
-          <li><a href="services.html#post-op">Post-surgery rehab</a></li>
-          <li><a href="services.html#spine">Back &amp; neck pain</a></li>
-          <li><a href="services.html#manual">Manual therapy</a></li>
-          <li><a href="services.html#needling">Dry needling</a></li>
+          <li><a href="/services#sports">Sports injuries</a></li>
+          <li><a href="/services#post-op">Post-surgery rehab</a></li>
+          <li><a href="/services#spine">Back &amp; neck pain</a></li>
+          <li><a href="/services#manual">Manual therapy</a></li>
+          <li><a href="/services#needling">Dry needling</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 footer-col">
         <h4>Clinic</h4>
         <ul>
-          <li><a href="index.html#team">Our therapists</a></li>
-          <li><a href="index.html#journey">How it works</a></li>
-          <li><a href="index.html#stories">Patient stories</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="/#team">Our therapists</a></li>
+          <li><a href="/#journey">How it works</a></li>
+          <li><a href="/#stories">Patient stories</a></li>
+          <li><a href="/#faq">FAQ</a></li>
           <li><a href="#book">Book online</a></li>
         </ul>
       </div>
@@ -488,12 +480,392 @@
     </div>
     <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
       <span>&copy; 2026 Restore Physical Therapy. All rights reserved.</span>
-      <span>Built with Bootstrap 5 · <a href="index.html#home">Back to top</a></span>
+      <span>Built with Bootstrap 5 · <a href="/#home">Back to top</a></span>
     </div>
   </div>
-</footer>
+</footer>`;
+const pageBehavior = `/* ============================================================
+   RESTORE — vanilla JavaScript (no jQuery)
+   One function per feature · guard clauses · IntersectionObserver
+   Honours prefers-reduced-motion.
+   ============================================================ */
+(function () {
+  "use strict";
 
-<script src="js/vendor/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>
-</body>
-</html>
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- Mobile navigation ---------- */
+  function initMobileNav() {
+    var toggle = document.querySelector(".nav-toggle");
+    var menu = document.getElementById("navMenu");
+    if (!toggle || !menu) return;
+
+    function close() {
+      menu.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+    function open() {
+      menu.classList.add("open");
+      toggle.setAttribute("aria-expanded", "true");
+    }
+    toggle.addEventListener("click", function () {
+      var expanded = toggle.getAttribute("aria-expanded") === "true";
+      expanded ? close() : open();
+    });
+    // Close when a link is tapped (mobile)
+    menu.addEventListener("click", function (e) {
+      if (e.target.closest("a") && window.innerWidth < 992) close();
+    });
+    // Close on Escape
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") close();
+    });
+    // Reset when resizing to desktop
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 992) close();
+    });
+  }
+
+  /* ---------- Navbar shadow on scroll ---------- */
+  function initNavScroll() {
+    var nav = document.querySelector(".site-nav");
+    if (!nav) return;
+    function onScroll() {
+      nav.classList.toggle("scrolled", window.scrollY > 8);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  /* ---------- Active nav link (scroll spy) ---------- */
+  function initScrollSpy() {
+    var links = Array.prototype.slice.call(
+      document.querySelectorAll('.site-nav .nav-link[href^="#"]')
+    );
+    if (!links.length) return;
+    var sections = links
+      .map(function (l) {
+        var id = l.getAttribute("href");
+        return id.length > 1 ? document.querySelector(id) : null;
+      })
+      .filter(Boolean);
+    if (!sections.length) return;
+
+    var obs = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          links.forEach(function (l) {
+            l.classList.toggle(
+              "active",
+              l.getAttribute("href") === "#" + entry.target.id
+            );
+          });
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+    );
+    sections.forEach(function (s) { obs.observe(s); });
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  function initReveal() {
+    var els = document.querySelectorAll(".reveal");
+    if (!els.length) return;
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      els.forEach(function (el) { el.classList.add("in"); });
+      return;
+    }
+    var obs = new IntersectionObserver(
+      function (entries, o) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            o.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+    els.forEach(function (el) { obs.observe(el); });
+  }
+
+  /* ---------- Count-up statistics ---------- */
+  function initCountUp() {
+    var nums = document.querySelectorAll("[data-count]");
+    if (!nums.length) return;
+
+    function run(el) {
+      var target = parseFloat(el.getAttribute("data-count"));
+      var decimals = (el.getAttribute("data-decimals") || "0") | 0;
+      var suffix = el.getAttribute("data-suffix") || "";
+      if (reduceMotion) {
+        el.textContent = target.toFixed(decimals) + suffix;
+        return;
+      }
+      var start = null;
+      var dur = 1600;
+      function step(ts) {
+        if (start === null) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = (target * eased).toFixed(decimals) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = target.toFixed(decimals) + suffix;
+      }
+      requestAnimationFrame(step);
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      nums.forEach(run);
+      return;
+    }
+    var obs = new IntersectionObserver(
+      function (entries, o) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            run(entry.target);
+            o.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    nums.forEach(function (n) { obs.observe(n); });
+  }
+
+  /* ---------- Testimonials slider ---------- */
+  function initTestimonials() {
+    var slider = document.querySelector("[data-tslider]");
+    if (!slider) return;
+    var track = slider.querySelector(".ttrack");
+    var slides = slider.querySelectorAll(".tslide");
+    var prev = slider.querySelector("[data-tprev]");
+    var next = slider.querySelector("[data-tnext]");
+    var dotsWrap = slider.querySelector("[data-tdots]");
+    if (!track || !slides.length) return;
+
+    var index = 0;
+
+    function perView() {
+      return window.innerWidth >= 768 ? 2 : 1;
+    }
+    function maxIndex() {
+      return Math.max(0, slides.length - perView());
+    }
+    function buildDots() {
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = "";
+      var count = maxIndex() + 1;
+      for (var i = 0; i < count; i++) {
+        var b = document.createElement("button");
+        b.className = "tdot";
+        b.type = "button";
+        b.setAttribute("aria-label", "Go to testimonial group " + (i + 1));
+        (function (i) {
+          b.addEventListener("click", function () { go(i); });
+        })(i);
+        dotsWrap.appendChild(b);
+      }
+    }
+    function update() {
+      var slideW = 100 / perView();
+      track.style.transform = "translateX(-" + index * slideW + "%)";
+      if (dotsWrap) {
+        var dots = dotsWrap.querySelectorAll(".tdot");
+        dots.forEach(function (d, i) { d.classList.toggle("active", i === index); });
+      }
+    }
+    function go(i) {
+      index = Math.max(0, Math.min(i, maxIndex()));
+      update();
+    }
+    if (next) next.addEventListener("click", function () {
+      index = index >= maxIndex() ? 0 : index + 1;
+      update();
+    });
+    if (prev) prev.addEventListener("click", function () {
+      index = index <= 0 ? maxIndex() : index - 1;
+      update();
+    });
+
+    // Keyboard support
+    slider.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight" && next) next.click();
+      if (e.key === "ArrowLeft" && prev) prev.click();
+    });
+
+    // Basic touch/swipe
+    var startX = 0, dragging = false;
+    track.addEventListener("touchstart", function (e) { startX = e.touches[0].clientX; dragging = true; }, { passive: true });
+    track.addEventListener("touchend", function (e) {
+      if (!dragging) return;
+      dragging = false;
+      var dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 45) { dx < 0 ? (next && next.click()) : (prev && prev.click()); }
+    });
+
+    var resizeTimer;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        if (index > maxIndex()) index = maxIndex();
+        buildDots();
+        update();
+      }, 150);
+    });
+
+    buildDots();
+    update();
+  }
+
+  /* ---------- Service / condition filtering (services.html) ---------- */
+  function initFilter() {
+    var bar = document.querySelector("[data-filter-bar]");
+    if (!bar) return;
+    var buttons = bar.querySelectorAll(".filter-btn");
+    var items = document.querySelectorAll("[data-cat]");
+    if (!items.length) return;
+
+    bar.addEventListener("click", function (e) {
+      var btn = e.target.closest(".filter-btn");
+      if (!btn) return;
+      var cat = btn.getAttribute("data-filter");
+      buttons.forEach(function (b) {
+        b.classList.toggle("active", b === btn);
+        b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+      });
+      items.forEach(function (item) {
+        var match = cat === "all" || item.getAttribute("data-cat") === cat;
+        item.style.display = match ? "" : "none";
+      });
+    });
+  }
+
+  /* ---------- Appointment / booking form validation ---------- */
+  function initForms() {
+    var forms = document.querySelectorAll("[data-validate]");
+    if (!forms.length) return;
+
+    forms.forEach(function (form) {
+      form.setAttribute("novalidate", "novalidate");
+      var success = form.querySelector(".form-success");
+
+      function validateField(field) {
+        var group = field.closest(".mb-3, .col, .field") || field.parentElement;
+        var err = group ? group.querySelector(".field-error") : null;
+        var valid = true;
+        var isCheckable = field.type === "checkbox" || field.type === "radio";
+        var value = isCheckable ? (field.checked ? "on" : "") : (field.value || "").trim();
+
+        if (field.hasAttribute("required") && !value) valid = false;
+        if (valid && field.type === "email" && value) {
+          valid = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(value);
+        }
+        if (valid && field.type === "tel" && value) {
+          valid = value.replace(/[^\\d]/g, "").length >= 7;
+        }
+        field.classList.toggle("is-invalid", !valid);
+        field.setAttribute("aria-invalid", valid ? "false" : "true");
+        if (err) err.classList.toggle("show", !valid);
+        return valid;
+      }
+
+      var fields = form.querySelectorAll("input, select, textarea");
+      fields.forEach(function (f) {
+        f.addEventListener("blur", function () { validateField(f); });
+        f.addEventListener("input", function () {
+          if (f.classList.contains("is-invalid")) validateField(f);
+        });
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var allValid = true;
+        var firstBad = null;
+        fields.forEach(function (f) {
+          if (f.type === "hidden") return;
+          if (!validateField(f)) {
+            allValid = false;
+            if (!firstBad) firstBad = f;
+          }
+        });
+        if (!allValid) {
+          if (firstBad) firstBad.focus();
+          return;
+        }
+        if (success) {
+          success.classList.add("show");
+          form.reset();
+          fields.forEach(function (f) { f.classList.remove("is-invalid"); });
+          success.focus && success.focus();
+          setTimeout(function () { success.classList.remove("show"); }, 6000);
+        }
+      });
+    });
+  }
+
+  /* ---------- Set min date on date inputs to today ---------- */
+  function initDateMin() {
+    var inputs = document.querySelectorAll('input[type="date"]');
+    if (!inputs.length) return;
+    var today = new Date().toISOString().split("T")[0];
+    inputs.forEach(function (i) {
+      if (!i.getAttribute("min")) i.setAttribute("min", today);
+    });
+  }
+
+  /* ---------- Footer year ---------- */
+  function initYear() {
+    var el = document.querySelector("[data-year]");
+    if (el) el.textContent = new Date().getFullYear();
+  }
+
+  function initAccordion() {
+    document.addEventListener("click", function (event) {
+      var button = event.target.closest('[data-bs-toggle="collapse"]');
+      if (!button) return;
+      var target = document.querySelector(button.getAttribute("data-bs-target"));
+      if (!target) return;
+      var opening = !target.classList.contains("show");
+      var parent = button.closest("[data-bs-parent]");
+      if (opening && parent) {
+        parent.querySelectorAll(".accordion-collapse.show").forEach(function (panel) {
+          panel.classList.remove("show");
+          var trigger = parent.querySelector('[data-bs-target="#' + panel.id + '"]');
+          if (trigger) {
+            trigger.classList.add("collapsed");
+            trigger.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+      target.classList.toggle("show", opening);
+      button.classList.toggle("collapsed", !opening);
+      button.setAttribute("aria-expanded", String(opening));
+    });
+  }
+
+  /* ---------- Init all ---------- */
+    initAccordion();
+    initMobileNav();
+    initNavScroll();
+    initScrollSpy();
+    initReveal();
+    initCountUp();
+    initTestimonials();
+    initFilter();
+    initForms();
+    initDateMin();
+    initYear();
+})();`;
+
+export default function Page() {
+  return (
+    <>
+      <div dangerouslySetInnerHTML={{ __html: pageMarkup }} />
+      <Script id="services-behavior" strategy="afterInteractive">
+        {pageBehavior}
+      </Script>
+    </>
+  );
+}
