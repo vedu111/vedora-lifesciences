@@ -63,7 +63,8 @@ body {
   line-height: 1.7;
   font-size: 1.0625rem;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
+  padding-top: var(--nav-h);
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3 {
@@ -91,6 +92,8 @@ img { max-width: 100%; height: auto; }
 
 .section { padding: 96px 0; }
 .section-sm { padding: 64px 0; }
+#faq { padding-bottom: 48px; }
+#location { padding-top: 48px; }
 
 .bg-mist  { background: var(--mist-2); }
 .bg-sand  { background: var(--sand); }
@@ -194,8 +197,9 @@ img { max-width: 100%; height: auto; }
   background: rgba(255, 255, 255, .96);
   backdrop-filter: saturate(160%) blur(8px);
   border-bottom: 1px solid var(--line);
+  height: var(--nav-h);
   min-height: var(--nav-h);
-  position: sticky; top: 0; z-index: 1030;
+  position: fixed; inset: 0 0 auto; z-index: 1030;
   transition: box-shadow .25s ease;
 }
 .site-nav.scrolled { box-shadow: var(--shadow-sm); }
@@ -747,6 +751,7 @@ textarea.form-control { min-height: 140px; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 991.98px) {
+  .site-nav { height: var(--nav-h); }
   .section { padding: 72px 0; }
   .hero { padding: 48px 0 64px; }
   .hero-badge-card { left: 10px; }

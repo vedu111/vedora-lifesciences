@@ -2,8 +2,6 @@
 
 import { Brand } from "./Brand";
 import {
-  IconFacebook,
-  IconInstagram,
   IconLinkedIn,
   IconPhone,
   IconPin,
@@ -21,10 +19,11 @@ const productLinks = [
 ];
 
 const companyLinks = [
+  { id: "home", label: "Home" },
   { id: "about", label: "About Us" },
-  { id: "products", label: "Our products" },
-  { id: "network", label: "Our network" },
-  { id: "contact", label: "Contact us" },
+  { id: "products", label: "Products" },
+  { id: "faq", label: "FAQ" },
+  { id: "location", label: "Contact" },
 ];
 
 export function SiteFooter() {
@@ -42,6 +41,29 @@ export function SiteFooter() {
 
         .vd-footer :global(.container) {
           max-width: 1360px;
+        }
+
+        /* Original logo with a soft light glow */
+        .vd-footer__brand {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 14px 22px;
+          margin: -12px 0 12px -18px;
+          border: none;
+          border-radius: 16px;
+          background: radial-gradient(
+            ellipse at center,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(239, 248, 255, 0.94) 55%,
+            rgba(7, 31, 64, 0) 100%
+          );
+        }
+
+        .vd-footer__brand :global(img) {
+          display: block;
+          max-width: 220px;
+          height: auto;
         }
 
         .vd-footer :global(.footer-about) {
@@ -117,7 +139,8 @@ export function SiteFooter() {
           border-radius: 12px;
           background: rgba(255, 255, 255, 0.08);
           color: #ffffff;
-          transition: background 180ms ease,
+          transition:
+            background 180ms ease,
             transform 180ms ease;
         }
 
@@ -189,6 +212,15 @@ export function SiteFooter() {
             padding-top: 38px;
           }
 
+          .vd-footer__brand {
+            padding: 12px 16px;
+            margin-left: -12px;
+          }
+
+          .vd-footer__brand :global(img) {
+            max-width: 190px;
+          }
+
           .vd-footer :global(.footer-col h4) {
             margin-bottom: 17px;
             font-size: 12px;
@@ -216,7 +248,9 @@ export function SiteFooter() {
         <div className="row g-4">
           {/* Brand and company overview */}
           <div className="col-lg-4 col-md-12">
-            <Brand />
+            <div className="vd-footer__brand">
+              <Brand />
+            </div>
 
             <p className="footer-about">
               VEDORA LIFESCIENCES is building a trusted B2B healthcare
@@ -292,7 +326,6 @@ export function SiteFooter() {
 
             <div className="footer-contact-line">
               <IconPin />
-
               <span>
                 Navi Mumbai,
                 <br />
@@ -302,7 +335,6 @@ export function SiteFooter() {
 
             <div className="footer-contact-line">
               <IconPhone />
-
               <a
                 className="vd-footer__contact-link"
                 href="mailto:info@vedora.in"
@@ -313,7 +345,6 @@ export function SiteFooter() {
 
             <div className="footer-contact-line">
               <IconPin />
-
               <a href={homeHref("contact")}>
                 Business enquiries and distribution partnerships
               </a>
@@ -326,9 +357,7 @@ export function SiteFooter() {
             &copy; {year} VEDORA LIFESCIENCES. All rights reserved.
           </span>
 
-          <span>
-            Connecting Healthcare, Delivering Trust.
-          </span>
+          <span>Connecting Healthcare, Delivering Trust.</span>
         </div>
       </div>
     </footer>

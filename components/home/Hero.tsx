@@ -40,7 +40,7 @@ export function Hero() {
 
               <a
                 className="vedora-hero-btn vedora-hero-btn-outline"
-                href="#contact"
+                href="#location"
               >
                 Partner With Us
               </a>
