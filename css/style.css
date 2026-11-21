@@ -782,6 +782,10 @@ textarea.form-control { min-height: 140px; }
   }
 
   body { font-size: 1rem; }
+  .loc-address {
+    font-size: .94rem;
+    line-height: 1.65;
+  }
   .brand-logo { height: 52px; }
   .site-nav nav.container {
     padding-left: 18px;

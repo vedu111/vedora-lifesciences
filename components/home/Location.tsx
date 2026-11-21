@@ -28,7 +28,7 @@ export function Location() {
                 </span>
                 <div>
                   <div className="lt">Address</div>
-                  <p>
+                  <p className="loc-address">
                     Room No.05, SHARDDHA CHS, 2ND FLOOR,
                     <br />
                     PLOT NO 25, SEC 13, Kalamboli Node,
