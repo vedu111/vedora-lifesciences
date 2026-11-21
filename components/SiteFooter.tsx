@@ -339,7 +339,7 @@ export function SiteFooter() {
               <IconPhone />
               <a
                 className="vd-footer__contact-link"
-                href="mailto:info@vedora.in"
+                href="mailto:vedoralifesciencesin@gmail.com"
               >
                 vedoralifesciencesin@gmail.com
               </a>
@@ -347,7 +347,7 @@ export function SiteFooter() {
 
             <div className="footer-contact-line">
               <IconPin />
-              <a href={homeHref("contact")}>
+              <a href={homeHref("location")}>
                 Business enquiries and distribution partnerships
               </a>
             </div>

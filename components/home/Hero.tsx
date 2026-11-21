@@ -24,9 +24,9 @@ export function Hero() {
             </h1>
 
             <p className="vedora-hero-description">
-              A reliable B2B distribution partner for nutraceuticals and
-              healthcare products, serving pharmacies, healthcare retailers,
-              wellness stores, and eligible institutions.
+              A reliable B2B distributor of nutraceutical and healthcare
+              products for pharmacies, healthcare retailers, wellness stores,
+              and eligible institutions.
             </p>
 
               <div className="vedora-hero-actions">

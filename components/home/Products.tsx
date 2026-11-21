@@ -11,14 +11,14 @@ export default function Product() {
           <div className="vd-products__eyebrow">Our Products</div>
 
           <h2 className="vd-products__heading">
-            Nutraceuticals &amp; <br />
+            Nutraceutical &amp; <br />
             <span>Healthcare</span> Products
           </h2>
 
           <p className="vd-products__description">
-            A focused range of high-quality nutraceuticals and healthcare
-            products from authorised suppliers, catered to the needs of
-            pharmacies, healthcare retailers, wellness stores, and institutions.
+            A focused range of nutraceutical, and healthcare
+            products from authorised suppliers for pharmacies, healthcare
+            retailers, wellness stores, and institutions.
           </p>
         </div>
 

@@ -90,7 +90,7 @@ export function SiteNav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Active section detection
+  // Keep the active link aligned with the section below the fixed header.
   useEffect(() => {
     const sections = hashLinks
       .map((link) => document.getElementById(link.id))
@@ -98,23 +98,39 @@ export function SiteNav() {
 
     if (!sections.length) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveHash(entry.target.id);
-          }
-        });
-      },
-      {
-        rootMargin: "-35% 0px -55% 0px",
-        threshold: 0,
+    function updateActiveSection() {
+      const headerOffset =
+        document.querySelector(".site-nav")?.getBoundingClientRect().height ?? 0;
+      const activationLine = headerOffset + 80;
+      const atPageBottom =
+        window.scrollY + window.innerHeight >=
+        document.documentElement.scrollHeight - 2;
+
+      if (atPageBottom) {
+        setActiveHash(sections[sections.length - 1].id);
+        return;
       }
-    );
 
-    sections.forEach((section) => observer.observe(section));
+      let activeSection = sections[0];
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= activationLine) {
+          activeSection = section;
+        } else {
+          break;
+        }
+      }
 
-    return () => observer.disconnect();
+      setActiveHash(activeSection.id);
+    }
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
   }, []);
 
   // Escape key and resize
@@ -252,7 +268,10 @@ export function SiteNav() {
                     activeHash === link.id ? " active" : ""
                   }`}
                   href={homeHref(link.id)}
-                  onClick={closeMenu}
+                  onClick={() => {
+                    setActiveHash(link.id);
+                    closeMenu();
+                  }}
                 >
                   <span className="nav-link-icon">
                     <NavIcon id={link.id} />

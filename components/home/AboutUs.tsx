@@ -80,7 +80,7 @@ export default function AboutUs() {
             </h2>
 
             <p className="va-description">
-             VEDORA LIFESCIENCES is your trusted partner in healthcare and nutraceutical distribution, committed to connecting pharmacies, healthcare retailers, wellness stores, and institutions with quality products and dependable sourcing. We focus on seamless procurement, competitive pricing, reliable supply, and responsive service to help our partners grow while making healthcare products more accessible.
+             VEDORA LIFESCIENCES is a B2B distributor of nutraceutical and healthcare products, serving pharmacies, healthcare retailers, wellness stores, and institutions. We focus on dependable sourcing, competitive procurement, reliable product supply, and responsive service to help our partners grow.
             </p>
 
             <div className="va-highlights">
