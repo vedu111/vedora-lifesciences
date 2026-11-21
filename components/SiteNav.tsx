@@ -90,6 +90,26 @@ export function SiteNav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Keep section navigation working without leaving a fragment in shareable URLs.
+  useEffect(() => {
+    function clearSectionHash() {
+      if (!hashLinks.some((link) => window.location.hash === `#${link.id}`)) {
+        return;
+      }
+
+      window.history.replaceState(
+        window.history.state,
+        "",
+        window.location.pathname + window.location.search
+      );
+    }
+
+    clearSectionHash();
+    window.addEventListener("hashchange", clearSectionHash);
+
+    return () => window.removeEventListener("hashchange", clearSectionHash);
+  }, []);
+
   // Keep the active link aligned with the section below the fixed header.
   useEffect(() => {
     const sections = hashLinks
