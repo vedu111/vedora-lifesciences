@@ -1,42 +1,27 @@
-import { clinic } from "../../lib/clinic";
+
 import { IconMail, IconPhone, IconPin } from "../icons";
 import { Reveal } from "../Reveal";
 
-const hours = [
-  { name: "Monday", hours: "7:00 – 19:00", day: 1 },
-  { name: "Tuesday", hours: "7:00 – 19:00", day: 2 },
-  { name: "Wednesday", hours: "7:00 – 19:00", day: 3 },
-  { name: "Thursday", hours: "7:00 – 19:00", day: 4 },
-  { name: "Friday", hours: "7:00 – 17:00", day: 5 },
-  { name: "Saturday", hours: "8:00 – 13:00", day: 6 },
-  { name: "Sunday", hours: "Closed", day: 0 },
-];
-
 export function Location() {
-  const today = new Date().getDay();
+  const address =
+    "Room No.05, SHARDDHA CHS, 2ND FLOOR, PLOT NO 25, SEC 13, Kalamboli Node, Raigarh, Panvel, Maharashtra - 410218";
+
+  const phone = "8928945887";
+  const email = "vedoralifesciencesin@gmail.com";
+
+  const mapsUrl =
+    "https://www.google.com/maps/place/Sharddha+chs,plot+no+25+sector+13,Kalamboli+panvel/@19.0353589,73.0974459,1647m/data=!3m1!1e3!4m6!3m5!1s0x3be7e9007a67b0c3:0x10bbc086fabfc66c!8m2!3d19.03544!4d73.10045!16s%2Fg%2F11yr_hzt5c?entry=ttu";
 
   return (
     <section className="section bg-sand" id="location">
       <div className="container">
         <div className="row g-4 align-items-stretch">
-          <div className="col-lg-4">
+          {/* Find Us */}
+          <div className="col-lg-5">
             <Reveal className="loc-card">
-              <span className="eyebrow">Clinic hours</span>
-              <table className="hours-table">
-                <tbody>
-                  {hours.map((row) => (
-                    <tr key={row.name} className={row.day === today ? "today" : undefined}>
-                      <td>{row.name}</td>
-                      <td>{row.hours}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </Reveal>
-          </div>
-          <div className="col-lg-4">
-            <Reveal className="loc-card reveal-d1">
-              <span className="eyebrow">Find us</span>
+              <span className="eyebrow">Find Us</span>
+
+              {/* Address */}
               <div className="loc-line">
                 <span className="li" aria-hidden="true">
                   <IconPin />
@@ -44,45 +29,84 @@ export function Location() {
                 <div>
                   <div className="lt">Address</div>
                   <p>
-                    {clinic.addressLine1}
+                    Room No.05, SHARDDHA CHS, 2ND FLOOR,
                     <br />
-                    {clinic.addressLine2}
+                    PLOT NO 25, SEC 13, Kalamboli Node,
+                    <br />
+                    Raigarh, Panvel, Maharashtra - 410218
                   </p>
                 </div>
               </div>
+
+              {/* Phone */}
               <div className="loc-line">
                 <span className="li" aria-hidden="true">
                   <IconPhone />
                 </span>
                 <div>
                   <div className="lt">Phone</div>
-                  <a href={`tel:${clinic.phoneTel}`}>{clinic.phoneDisplay}</a>
+                  <a href={`tel:${phone}`}>{phone}</a>
                 </div>
               </div>
+
+              {/* Email */}
               <div className="loc-line">
                 <span className="li" aria-hidden="true">
                   <IconMail />
                 </span>
                 <div>
                   <div className="lt">Email</div>
-                  <a href={`mailto:${clinic.email}`}>{clinic.email}</a>
+                  <a href={`mailto:${email}`}>{email}</a>
                 </div>
               </div>
-            </Reveal>
-          </div>
-          <div className="col-lg-4">
-            <Reveal className="map-embed reveal-d2">
-              <div>
-                <div className="map-pin" aria-hidden="true">
-                  <IconPin />
-                </div>
-                <p className="mb-3" style={{ color: "var(--teal-800)", fontWeight: 700 }}>
-                  Free parking · Ground-floor, wheelchair accessible
-                </p>
-                <a className="btn btn-teal" href={clinic.mapsUrl} target="_blank" rel="noopener">
+
+              {/* Get Directions below email */}
+              <div className="mt-4">
+                <a
+                  className="btn btn-teal"
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Get directions
                 </a>
               </div>
+            </Reveal>
+          </div>
+
+          {/* Google Maps */}
+          <div className="col-lg-7">
+            <Reveal className="map-embed reveal-d1">
+              <div className="mb-3">
+                <div className="map-pin" aria-hidden="true">
+                  <IconPin />
+                </div>
+
+                <p
+                  className="mb-3"
+                  style={{
+                    color: "var(--teal-800)",
+                    fontWeight: 700,
+                  }}
+                >
+                  Sharddha CHS, Plot No. 25, Sector 13,
+                  Kalamboli, Panvel, Maharashtra - 410218
+                </p>
+              </div>
+
+              <iframe
+                src="https://maps.google.com/maps?q=19.03544,73.10045&z=16&output=embed"
+                width="100%"
+                height="350"
+                style={{
+                  border: 0,
+                  borderRadius: "12px",
+                }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Sharddha CHS Kalamboli location"
+              />
             </Reveal>
           </div>
         </div>

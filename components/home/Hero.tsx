@@ -1,5 +1,5 @@
 "use client";
-
+import { IconPhone } from "../icons";
 export function Hero() {
   return (
     <section className="vedora-hero" id="home">
@@ -29,22 +29,25 @@ export function Hero() {
               wellness stores, and eligible institutions.
             </p>
 
-            <div className="vedora-hero-actions">
-              <a
-                className="vedora-hero-btn vedora-hero-btn-primary"
-                href="#products"
-              >
-                Our Products
-                <span aria-hidden="true">→</span>
-              </a>
+              <div className="vedora-hero-actions">
+  <a
+    className="vedora-hero-btn vedora-hero-btn-primary"
+    href="#products"
+  >
+    Our Products
+    <span aria-hidden="true">→</span>
+  </a>
 
-              <a
-                className="vedora-hero-btn vedora-hero-btn-outline"
-                href="#location"
-              >
-                Partner With Us
-              </a>
-            </div>
+  <a
+    className="vedora-hero-btn vedora-hero-btn-outline"
+    href="https://wa.me/918928945887?text=Hello%20VEDORA%20LIFESCIENCES%2C%20I%20would%20like%20to%20know%20more%20about%20your%20healthcare%20and%20nutraceutical%20products."
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <IconPhone />
+    <span>Contact Us</span>
+  </a>
+</div>
 
             {/* BUSINESS BENEFITS */}
             <div className="vedora-hero-benefits">

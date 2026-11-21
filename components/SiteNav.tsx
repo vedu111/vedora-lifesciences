@@ -9,7 +9,7 @@ const hashLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About Us" },
   { id: "products", label: "Products" },
-  { id: "faq", label: "FAQ" },
+  // { id: "faq", label: "FAQ" },
   { id: "location", label: "Contact" },
 ];
 
@@ -143,15 +143,17 @@ export function SiteNav() {
           </ul>
 
           <div className="nav-cta-wrap d-flex align-items-center gap-3">
-            <a
-              className="btn btn-coral nav-contact-btn"
-              href={homeHref("location")}
-              onClick={closeMenu}
-            >
-              <IconPhone />
-              Get in Touch
-            </a>
-          </div>
+  <a
+    className="btn btn-coral nav-contact-btn"
+    href="https://wa.me/918928945887?text=Hello%20VEDORA%20LIFESCIENCES%2C%20I%20would%20like%20to%20know%20more%20about%20your%20healthcare%20and%20nutraceutical%20products."
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={closeMenu}
+  >
+    <IconPhone />
+    Get in Touch
+  </a>
+</div>
         </div>
       </nav>
 

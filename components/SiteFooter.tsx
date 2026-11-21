@@ -22,7 +22,7 @@ const companyLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About Us" },
   { id: "products", label: "Products" },
-  { id: "faq", label: "FAQ" },
+  // { id: "faq", label: "FAQ" },
   { id: "location", label: "Contact" },
 ];
 
@@ -265,20 +265,22 @@ export function SiteFooter() {
 
             <div className="footer-social mt-4">
               <a
-                href={homeHref("contact")}
-                aria-label="Contact VEDORA LIFESCIENCES"
-              >
-                <IconPhone />
-              </a>
+  href="tel:8928945887"
+  aria-label="Call VEDORA LIFESCIENCES"
+>
+  <IconPhone />
+</a>
 
-              <a
-                href={homeHref("about")}
-                aria-label="About VEDORA LIFESCIENCES"
-              >
-                <IconPin />
-              </a>
+<a
+  href="https://www.google.com/maps/place/Sharddha+chs,plot+no+25+sector+13,Kalamboli+panvel/@19.0353589,73.0974459,1647m/data=!3m1!1e3!4m6!3m5!1s0x3be7e9007a67b0c3:0x10bbc086fabfc66c!8m2!3d19.03544!4d73.10045!16s%2Fg%2F11yr_hzt5c?entry=ttu"
+  aria-label="Find VEDORA LIFESCIENCES on Google Maps"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <IconPin />
+</a>
 
-              <a
+              {/* <a
                 href={homeHref("products")}
                 aria-label="Explore our products"
               >
@@ -290,7 +292,7 @@ export function SiteFooter() {
                 aria-label="Explore our distribution network"
               >
                 <IconYouTube />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -327,9 +329,9 @@ export function SiteFooter() {
             <div className="footer-contact-line">
               <IconPin />
               <span>
-                Navi Mumbai,
+                Sharddha CHS, Plot No. 25, Sector 13, Kalamboli, Panvel
                 <br />
-                Maharashtra, India
+                Maharashtra - 410218
               </span>
             </div>
 
@@ -339,7 +341,7 @@ export function SiteFooter() {
                 className="vd-footer__contact-link"
                 href="mailto:info@vedora.in"
               >
-                info@vedora.in
+                vedoralifesciencesin@gmail.com
               </a>
             </div>
 

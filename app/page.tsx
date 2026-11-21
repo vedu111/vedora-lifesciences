@@ -13,13 +13,13 @@ description: "Trusted B2B distribution of nutraceuticals and healthcare products
 };
 
 export default function HomePage() {
-  return (
+  return (  
     <main id="main">
       <Hero />
       <AboutUs />
       <Product />
       {/* <Testimonials /> */}
-      <Faq />
+      {/* <Faq />    */}
       <Location />
     </main>
   );
