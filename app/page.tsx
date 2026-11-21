@@ -5,7 +5,7 @@ import { Location } from "../components/home/Location";
 import Product from "../components/home/Products";
 
 export const metadata: Metadata = {
-  title: "Nutraceutical & Healthcare Distributor in Panvel",
+  title: "Nutraceutical & Healthcare Distributor",
   description:
     "VEDORA LIFESCIENCES supplies nutraceutical and healthcare products to pharmacies, retailers and institutions in Panvel, Maharashtra.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Nutraceutical & Healthcare Distributor in Panvel",
+    title: "Nutraceutical & Healthcare Distributor",
     description:
       "B2B nutraceutical and healthcare product distribution for pharmacies, retailers and institutions in Panvel, Maharashtra.",
     url: "/",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nutraceutical & Healthcare Distributor in Panvel",
+    title: "Nutraceutical & Healthcare Distributor",
     description:
       "B2B nutraceutical and healthcare product distribution for pharmacies, retailers and institutions in Panvel, Maharashtra.",
     images: ["/img/og-brand.png"],
