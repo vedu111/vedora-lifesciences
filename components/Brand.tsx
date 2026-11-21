@@ -11,6 +11,7 @@ export function Brand() {
         height={819}
         className="brand-logo"
         sizes="280px"
+        unoptimized
         priority
       />
     </Link>
